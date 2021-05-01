@@ -1,0 +1,556 @@
+Linux
+1. Create `linux_lecture` directory and notes.txt file
+
+tpohorilets@tpohorilets-Latitude-E7450:~$ mkdir linux_lecture && touch notes.txt
+tpohorilets@tpohorilets-Latitude-E7450:~$ ls
+cursor         Desktop        Music      PycharmProjects  презентації
+cursor_git_hw  Documents      notes.txt  snap
+Cursor_HW      Downloads      Pictures   Templates
+cursor_hw_adv  linux_lecture  Public     Videos
+tpohorilets@tpohorilets-Latitude-E7450:~$ 
+
+2. Copy notes.txt file to linux_lecture directory
+
+tpohorilets@tpohorilets-Latitude-E7450:~$ cp notes.txt linux_lecture/
+tpohorilets@tpohorilets-Latitude-E7450:~$ ls
+cursor         Desktop        Music      PycharmProjects  презентації
+cursor_git_hw  Documents      notes.txt  snap
+Cursor_HW      Downloads      Pictures   Templates
+cursor_hw_adv  linux_lecture  Public     Videos
+tpohorilets@tpohorilets-Latitude-E7450:~$ cd linux_lecture/
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ ls
+notes.txt
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ 
+
+3. List the files in the current directory, in “long listing format”.
+
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ ll
+total 8
+drwxrwxr-x  2 tpohorilets tpohorilets 4096 тра  1 11:51 ./
+drwxr-xr-x 27 tpohorilets tpohorilets 4096 тра  1 11:50 ../
+-rw-rw-r--  1 tpohorilets tpohorilets    0 тра  1 11:51 notes.txt
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ 
+
+4. List all files, including hidden files, in the your home (~) directory, in reverse alphabetical order and long listing format.
+
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ cd
+tpohorilets@tpohorilets-Latitude-E7450:~$ ll
+total 136
+drwxr-xr-x 27 tpohorilets tpohorilets  4096 тра  1 11:50 ./
+drwxr-xr-x  4 root        root         4096 лют 16 23:47 ../
+-rw-------  1 tpohorilets tpohorilets 12263 кві 20 08:54 .bash_history
+-rw-r--r--  1 tpohorilets tpohorilets   220 лют 16 23:47 .bash_logout
+-rw-r--r--  1 tpohorilets tpohorilets  3771 лют 16 23:47 .bashrc
+drwx------ 21 tpohorilets tpohorilets  4096 бер 21 10:39 .cache/
+drwx------ 19 tpohorilets tpohorilets  4096 лют 27 12:52 .config/
+drwxrwxr-x  3 tpohorilets tpohorilets  4096 лют 19 23:18 cursor/
+drwxrwxr-x  4 tpohorilets tpohorilets  4096 бер 24 22:58 cursor_git_hw/
+drwxrwxr-x  2 tpohorilets tpohorilets  4096 лют 22 23:55 Cursor_HW/
+drwxrwxr-x  2 tpohorilets tpohorilets  4096 тра  1 11:47 cursor_hw_adv/
+drwxr-xr-x  2 tpohorilets tpohorilets  4096 лют 16 23:52 Desktop/
+drwxr-xr-x  2 tpohorilets tpohorilets  4096 лют 16 23:52 Documents/
+drwxr-xr-x  3 tpohorilets tpohorilets  4096 кві 30 22:57 Downloads/
+-rw-rw-r--  1 tpohorilets tpohorilets    68 лют 21 13:30 .gitconfig
+drwx------  3 tpohorilets tpohorilets  4096 лют 16 23:52 .gnupg/
+drwxrwxr-x  4 tpohorilets tpohorilets  4096 лют 27 12:52 .java/
+drwxrwxr-x  2 tpohorilets tpohorilets  4096 тра  1 11:51 linux_lecture/
+drwxr-xr-x  4 tpohorilets tpohorilets  4096 бер 21 10:39 .local/
+drwx------  5 tpohorilets tpohorilets  4096 лют 17 21:08 .mozilla/
+drwxr-xr-x  2 tpohorilets tpohorilets  4096 лют 16 23:52 Music/
+-rw-rw-r--  1 tpohorilets tpohorilets     0 тра  1 11:50 notes.txt
+drwxr-xr-x  2 tpohorilets tpohorilets  4096 лют 22 13:06 Pictures/
+drwx------  3 tpohorilets tpohorilets  4096 лют 17 21:14 .pki/
+-rw-r--r--  1 tpohorilets tpohorilets   807 лют 16 23:47 .profile
+drwxr-xr-x  2 tpohorilets tpohorilets  4096 лют 16 23:52 Public/
+drwxrwxr-x  5 tpohorilets tpohorilets  4096 бер 24 13:42 PycharmProjects/
+drwxr-xr-x  9 tpohorilets tpohorilets  4096 кві 28 22:55 snap/
+drwx------  2 tpohorilets tpohorilets  4096 лют 22 13:07 .ssh/
+-rw-r--r--  1 tpohorilets tpohorilets     0 лют 18 21:40 .sudo_as_admin_successful
+drwxr-xr-x  2 tpohorilets tpohorilets  4096 лют 16 23:52 Templates/
+drwx------  6 tpohorilets tpohorilets  4096 лют 27 14:06 .thunderbird/
+drwxr-xr-x  2 tpohorilets tpohorilets  4096 лют 16 23:52 Videos/
+drwxrwxr-x  2 tpohorilets tpohorilets  4096 лют 22 15:55 презентації/
+tpohorilets@tpohorilets-Latitude-E7450:~$ 
+
+
+5*. Rename the file notes.txt to new_notes.txt
+Hint: Renaming is done using the same command as moving.
+
+tpohorilets@tpohorilets-Latitude-E7450:~$ mv notes.txt new_notes.txt
+tpohorilets@tpohorilets-Latitude-E7450:~$ ls
+cursor         Desktop        Music          PycharmProjects  презентації
+cursor_git_hw  Documents      new_notes.txt  snap
+Cursor_HW      Downloads      Pictures       Templates
+cursor_hw_adv  linux_lecture  Public         Videos
+tpohorilets@tpohorilets-Latitude-E7450:~$ 
+
+
+6. Remove the files linux_lecture/notes.txt and new_notes.txt. Note that your answer must be a single command and not multiple commands.
+Hint: Many commands can accept more than one parameter.
+Create homework.sh file under linux_lecture directory
+
+tpohorilets@tpohorilets-Latitude-E7450:~$ mv notes.txt new_notes.txt
+tpohorilets@tpohorilets-Latitude-E7450:~$ ls
+cursor         Desktop        Music          PycharmProjects  презентації
+cursor_git_hw  Documents      new_notes.txt  snap
+Cursor_HW      Downloads      Pictures       Templates
+cursor_hw_adv  linux_lecture  Public         Videos
+tpohorilets@tpohorilets-Latitude-E7450:~$ rm linux_lecture/notes.txt new_notes.txt
+tpohorilets@tpohorilets-Latitude-E7450:~$ ls
+
+tpohorilets@tpohorilets-Latitude-E7450:~$ touch linux_lecture/homework.sh
+tpohorilets@tpohorilets-Latitude-E7450:~$ ls linux_lecture/
+homework.sh
+tpohorilets@tpohorilets-Latitude-E7450:~$ 
+
+7*. Set the file homework.sh to have a last-modified date of January 1, 2020, 4:15am.
+Hint: The man page for the proper command describes the timestamp 'STAMP' format to use. Look for this!
+Also note: Linux is case-sensitive when you are specifying file or directory names.
+You can use a * (asterisk) as a “wild-card” character to specify a group of files.
+For example, *foo means all files whose names end with foo, and foo* means all files whose names begin with foo.
+You can use a wildcard in the middle of a file name, such as foo*bar for all files that start with foo and end with bar.
+Create hw.sh, hw1.sh, hw2.sh, hw1.txt under the linux_lecture directory
+
+tpohorilets@tpohorilets-Latitude-E7450:~$ touch linux_lecture/homework.sh -m -t 202001010415
+tpohorilets@tpohorilets-Latitude-E7450:~$ ll linux_lecture/
+total 8
+drwxrwxr-x  2 tpohorilets tpohorilets 4096 тра  1 11:58 ./
+drwxr-xr-x 27 tpohorilets tpohorilets 4096 тра  1 11:56 ../
+-rw-rw-r--  1 tpohorilets tpohorilets    0 січ  1  2020 homework.sh
+
+tpohorilets@tpohorilets-Latitude-E7450:~$ stat linux_lecture/homework.sh 
+  File: linux_lecture/homework.sh
+  Size: 0         	Blocks: 0          IO Block: 4096   regular empty file
+Device: 807h/2055d	Inode: 786395      Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/tpohorilets)   Gid: ( 1000/tpohorilets)
+Access: 2021-05-01 11:58:23.101735040 +0300
+Modify: 2020-01-01 04:15:00.000000000 +0200
+Change: 2021-05-01 12:01:12.028136507 +0300
+ Birth: -
+tpohorilets@tpohorilets-Latitude-E7450:~$ cd linux_lecture/
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ ls
+homework.sh  hw1.sh  hw1.txt  hw2.sh  hw.sh
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ 
+
+8. Find all the files only with the extension .txt in the current directory.
+
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ ll |grep \.txt
+-rw-rw-r--  1 tpohorilets tpohorilets    0 тра  1 12:03 hw1.txt
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ 
+
+9. Copy all the text files (files whose names end with .txt) from the current folder to the new directory `lecture_new`
+
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ mkdir lecture_new/
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ cp *.txt lecture_new/
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ ls lecture_new/
+hw1.txt
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ 
+
+10. Write `echo 'linux_lecture'` to the homework.sh file by using echo.
+
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ echo 'echo "linux_lectures"' > homework.ch
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$
+
+11. Display the contents of homework.sh
+
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ cat homework.sh echo "linux_lecture"
+
+12. Change the permissions to just write for current user and try to Display contents again.
+
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ ll
+total 16
+drwxrwxr-x  3 tpohorilets tpohorilets 4096 тра  1 12:09 ./
+drwxr-xr-x 27 tpohorilets tpohorilets 4096 тра  1 11:56 ../
+-rw-rw-r--  1 tpohorilets tpohorilets   22 тра  1 12:09 homework.ch
+-rw-rw-r--  1 tpohorilets tpohorilets    0 січ  1  2020 homework.sh
+-rw-rw-r--  1 tpohorilets tpohorilets    0 тра  1 12:03 hw1.sh
+-rw-rw-r--  1 tpohorilets tpohorilets    0 тра  1 12:03 hw1.txt
+-rw-rw-r--  1 tpohorilets tpohorilets    0 тра  1 12:03 hw2.sh
+-rw-rw-r--  1 tpohorilets tpohorilets    0 тра  1 12:03 hw.sh
+drwxrwxr-x  2 tpohorilets tpohorilets 4096 тра  1 12:06 lecture_new/
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ 
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ chmod 264 homework.sh
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ cat homework.sh
+cat: homework.sh: Permission denied
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ 
+
+13. Change the permission to rwx for current user only and try again.
+
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ chmod 764 homework.sh
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ cat homework.sh echo "linux_lecture"
+
+13a. Execute the homework.sh
+
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ ./homework.sh
+./homework.sh: line 1: linux_lecture: command not found
+
+14. Write from 1 to 10 in each line in homework.sh by using text reader.
+🔍 Self Discovery: The head and tail commands output only the first or last few lines (respectively) of a file to the terminal.
+
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ subl homework.sh
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ 
+
+15. Display only the first 7 lines of the file homework.sh from the current directory on the terminal.
+
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ head -n 7 homework.sh
+1
+2
+3
+4
+5
+6
+7
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ 
+
+
+16*. Create notes.sh with `ls` and make it executable\
+
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ ll
+total 20
+drwxrwxr-x  3 tpohorilets tpohorilets 4096 тра  1 12:37 ./
+drwxr-xr-x 27 tpohorilets tpohorilets 4096 тра  1 11:56 ../
+-rwxrw-r--  1 tpohorilets tpohorilets   34 тра  1 12:27 homework.sh*
+-rw-rw-r--  1 tpohorilets tpohorilets    0 тра  1 12:03 hw1.sh
+-rw-rw-r--  1 tpohorilets tpohorilets    0 тра  1 12:03 hw1.txt
+-rw-rw-r--  1 tpohorilets tpohorilets    0 тра  1 12:03 hw2.sh
+-rw-rw-r--  1 tpohorilets tpohorilets    0 тра  1 12:03 hw.sh
+drwxrwxr-x  2 tpohorilets tpohorilets 4096 тра  1 12:06 lecture_new/
+-rw-rw-r--  1 tpohorilets tpohorilets    3 тра  1 12:37 notes.sh
+
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ chmod 777 notes.sh
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ ll
+total 20
+drwxrwxr-x  3 tpohorilets tpohorilets 4096 тра  1 12:37 ./
+drwxr-xr-x 27 tpohorilets tpohorilets 4096 тра  1 11:56 ../
+-rwxrw-r--  1 tpohorilets tpohorilets   34 тра  1 12:27 homework.sh*
+-rw-rw-r--  1 tpohorilets tpohorilets    0 тра  1 12:03 hw1.sh
+-rw-rw-r--  1 tpohorilets tpohorilets    0 тра  1 12:03 hw1.txt
+-rw-rw-r--  1 tpohorilets tpohorilets    0 тра  1 12:03 hw2.sh
+-rw-rw-r--  1 tpohorilets tpohorilets    0 тра  1 12:03 hw.sh
+drwxrwxr-x  2 tpohorilets tpohorilets 4096 тра  1 12:06 lecture_new/
+-rwxrwxrwx  1 tpohorilets tpohorilets    3 тра  1 12:37 notes.sh*
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ 
+
+17*. Execute notes.sh
+
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ ./notes.sh
+homework.sh  hw1.sh  hw1.txt  hw2.sh  hw.sh  lecture_new  notes.sh
+tpohorilets@tpohorilets-Latitude-E7450:~/linux_lecture$ 
+
+GIT
+1. Create a folder called cursor_git
+
+tpohorilets@tpohorilets-Latitude-E7450:~$ mkdir cursor_git
+tpohorilets@tpohorilets-Latitude-E7450:~$ ls
+cursor      cursor_git_hw  cursor_hw_adv  Documents  linux_lecture  Pictures  PycharmProjects  Templates  презентації
+cursor_git  Cursor_HW      Desktop        Downloads  Music          Public    snap             Videos
+tpohorilets@tpohorilets-Latitude-E7450:~$ 
+
+2. cd into the cursor_git folder.
+
+tpohorilets@tpohorilets-Latitude-E7450:~$ cd cursor_git
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+3. Create a file called first.py.
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ touch first.py
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ ls
+first.py
+
+4. Add first.py to the staging area.
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git add first.py
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git init
+Initialized empty Git repository in /home/tpohorilets/cursor_git/.git/
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git add first.py 
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+5. Commit with the message "adding first.py".
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git commit -m "adding first.py"
+[master (root-commit) 90b78ba] adding first.py
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 first.py
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+6. Check out your commit with git log.
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git log
+commit 90b78ba2eaab409e6d45cc76af9b1d307ed03067 (HEAD -> master)
+Author: Taras Pohorilets <taras.pohorilets@gmail.com>
+Date:   Sat May 1 12:49:10 2021 +0300
+
+    adding first.py
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+7. Create another file called second.py.
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ touch second.py
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ ls
+first.py  second.py
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+8. Add second.py to the staging area.
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ touch second.py
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ ls
+first.py  second.py
+
+9. Commit with the message "adding second.py"
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git commit -m "adding second.py"
+[master 59cca76] adding second.py
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 second.py
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+10. Remove the first.py file
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ rm first.py
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ ls
+second.py
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+11. Add this change to the staging area
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git add first.py
+
+12. Commit with the message "removing first.py"
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git commit -m "removing first.py"
+[master 1976c68] removing first.py
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 first.py
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+13. Check out your commits using git log
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git log
+commit 1976c6834f2107433241f42b6382b124f71acea5 (HEAD -> master)
+Author: Taras Pohorilets <taras.pohorilets@gmail.com>
+Date:   Sat May 1 12:53:27 2021 +0300
+
+    removing first.py
+
+commit 59cca76d957d357154488b3b895063a4ef67dbc2
+Author: Taras Pohorilets <taras.pohorilets@gmail.com>
+Date:   Sat May 1 12:51:31 2021 +0300
+
+    adding second.py
+
+commit 90b78ba2eaab409e6d45cc76af9b1d307ed03067
+Author: Taras Pohorilets <taras.pohorilets@gmail.com>
+Date:   Sat May 1 12:49:10 2021 +0300
+
+    adding first.py
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+14. Push your changes to remote
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git remote add origin git@github.com:TarasPohorilets/cursor_hw_adv.git
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git branch -M main
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git push -u origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 660 bytes | 660.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0)
+To github.com:TarasPohorilets/cursor_hw_adv.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+
+15. Create new branch from master called `first` (without checkout)
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git branch first
+
+16. Create one more branch from master called `second` (with checkout to it)
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git checkout -b second
+Switched to a new branch 'second'
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+17. Change the second.py file with "print('Hello')" string.
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ echo "print('Hello')" > second.py
+
+18. Stash you changes and checkout to first branch.
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git stash
+Saved working directory and index state WIP on second: 1976c68 removing first.py
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git checkout first 
+Switched to branch 'first'
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+19. Checkout back and Stash Pop the changes.
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git checkout second 
+Switched to branch 'second'
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git stash pop
+On branch second
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   second.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (a5f21a7e1de7013fd691ddc19b7dd9b8cec81960)
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+20. Add your changes to the staging area
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git add .
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git status
+On branch second
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   second.py
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+21. Commit with the message "Changing second.py".
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git commit -m "Changing second.py"
+[second 3f30804] Changing second.py
+ 1 file changed, 1 insertion(+)
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+22. Push your changes to remote
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git push origin second
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 272 bytes | 272.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'second' on GitHub by visiting:
+remote:      https://github.com/TarasPohorilets/cursor_hw_adv/pull/new/second
+remote: 
+To github.com:TarasPohorilets/cursor_hw_adv.git
+ * [new branch]      second -> second
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ D
+
+
+23. Checkout to first branch.
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git checkout first 
+Switched to branch 'first'
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+24. Change the second.py file with print("Cursor") string.
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ echo 'print("Cursor")' > second.py
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+25. Add your changes to the staging area
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git add second.py
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git status
+On branch first
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   second.py
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$
+
+26. Commit with the message "Changing second.py".
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git commit -m "Changing second.py"
+[first 3961570] Changing second.py
+ 1 file changed, 1 insertion(+)
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+27. Push your changes to remote
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git push origin first
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 274 bytes | 274.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'first' on GitHub by visiting:
+remote:      https://github.com/TarasPohorilets/cursor_hw_adv/pull/new/first
+remote: 
+To github.com:TarasPohorilets/cursor_hw_adv.git
+ * [new branch]      first -> first
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+28. Checkout to master branch
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+29*. Merge the changes from second branch
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git merge second
+Updating 1976c68..3f30804
+Fast-forward
+ second.py | 1 +
+ 1 file changed, 1 insertion(+)
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+30*. Then merge the changes from first branch
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git merge first
+Auto-merging second.py
+CONFLICT (content): Merge conflict in second.py
+Automatic merge failed; fix conflicts and then commit the result.
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
+
+31*. Resolve conflict and push the changes to remote
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   second.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ cat second.py
+<<<<<<< HEAD
+print('Hello')
+=======
+print("Cursor")
+>>>>>>> first
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git add second.py
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+	modified:   second.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.second.py.swp
+
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git commit -m "Resolving conflict in file second.py"
+[main 5039324] Resolving conflict in file second.py
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ git push origin --all
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 343 bytes | 343.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:TarasPohorilets/cursor_hw_adv.git
+   1976c68..5039324  main -> main
+tpohorilets@tpohorilets-Latitude-E7450:~/cursor_git$ 
