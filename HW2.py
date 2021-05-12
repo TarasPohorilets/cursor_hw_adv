@@ -49,9 +49,6 @@ class Elephant(Animal):
     def bashes(self):
         print(f"{self.name} bashes")
 
-    def bashes(self):
-        pass
-
 
 class Frog(Animal):
     """
@@ -141,10 +138,6 @@ class Arm:
 person = Person()
 for arm in person.arms:
     print(arm.message)
-
-# Output:
-# This is left arm
-# This is right arm
 
 # b.
 
