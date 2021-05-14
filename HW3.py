@@ -29,23 +29,6 @@ from abc import ABC, abstractmethod
 import random
 import time
 
-class Human(ABC):
-    @abstractmethod
-    def info_about_person(self):
-        raise NotImplementedError
-
-    @abstractmethod
-    def make_money(self):
-        raise NotImplementedError
-
-    @abstractmethod
-    def buy_house(self, house):
-        raise NotImplementedError
-
-    @abstractmethod
-    def income(self, flowers, price):
-        raise NotImplementedError
-
 class RealtorMeta(type):
     _instances = {}
 
