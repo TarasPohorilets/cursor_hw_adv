@@ -29,6 +29,7 @@ from abc import ABC, abstractmethod
 import random
 import time
 
+
 class RealtorMeta(type):
     _instances = {}
 
@@ -38,8 +39,9 @@ class RealtorMeta(type):
             cls._instances[cls] = instance
         return cls._instances[cls]
 
+
 class Person:
-    def __init__(self, name, age, money, houses=[]):
+    def __init__(self, name, age, money, houses):
         self.start_amount_of_money = money
         self.name = name
         self.age = age
@@ -47,7 +49,8 @@ class Person:
         self.houses = houses
 
     def info(self):
-        print(f'My name - {self.name}, Age - {self.age}, Money amount - {self.money}, houses in property - {len(self.houses)}')
+        print(
+            f'My name - {self.name}, Age - {self.age}, Money amount - {self.money}, houses in property - {len(self.houses)}')
 
     def make_money(self):
         self.money += self.start_amount_of_money * 0.25
@@ -81,7 +84,7 @@ class SmallHouse(House):
 
 
 class Realtor(metaclass=RealtorMeta):
-    def __init__(self, name, discount, houses=[]):
+    def __init__(self, name, discount, houses):
         self.name = name
         self.houses = houses
         self.discount = discount
@@ -98,13 +101,15 @@ class Realtor(metaclass=RealtorMeta):
             print(f'Realtor {self.name} steal money. Now {person.name} have {person.money} amount of money')
 
 
-if __name__ == '__main__':
+if __name__ != '__main__':
+    pass
+else:
     house_instance_0 = House(55000, 65)
     house_instance_1 = SmallHouse(35000, 45)
     house_instance_2 = SmallHouse(27000)
     house_instance_3 = SmallHouse(25500)
 
-    person_instance_0 = Person('Taras', 32, 30000, [house_instance_2])
+    person_instance_0 = Person('Taras', 32, 35000, [house_instance_2])
     realtor_instance = Realtor('Stiven', 0.20, [house_instance_0, house_instance_1, house_instance_3])
 
     current_count_of_houses_in_property = len(person_instance_0.houses)
@@ -121,7 +126,7 @@ if __name__ == '__main__':
 
         for i in realtor_instance.houses:
             if person_instance_0.money >= i.cost * (1 - discount):
-                print(f'Person {person_instance_0.name} can buy {str(i)} for {i.cost * (1- discount)}')
+                print(f'Person {person_instance_0.name} can buy {str(i)} for {i.cost * (1 - discount)}')
                 i.cost *= (1 - discount)
                 person_instance_0.buy_house(i)
 

@@ -1,4 +1,6 @@
 from abc import ABC, abstractmethod
+
+
 # 1. Create a class hierarchy of animals with at least 5 animals that have additional methods each,
 # create an instance for each of the animal and call the unique method for it.
 # Determine if each of the animal is an instance of the Animals class
@@ -7,6 +9,7 @@ class Animal:
     """
     Parent class, should have eat, sleep
     """
+
     def __init__(self, name):
         self.name = name
 
@@ -21,6 +24,7 @@ class Cat(Animal):
     """
     Some of the animal with 1-2 extra methods related to this animal
     """
+
     def meow(self):
         print(f"{self.name}: Meow!")
 
@@ -32,6 +36,7 @@ class Dog(Animal):
     """
     Some of the animal with 1-2 extra methods related to this animal
     """
+
     def bark(self):
         print(f"{self.name}: Bark!")
 
@@ -43,6 +48,7 @@ class Elephant(Animal):
     """
     Some of the animal with 1-2 extra methods related to this animal
     """
+
     def sing(self):
         print(f"{self.name}: Sing!")
 
@@ -54,6 +60,7 @@ class Frog(Animal):
     """
     Some of the animal with 1-2 extra methods related to this animal
     """
+
     def jumps(self):
         print(f"{self.name} jumps")
 
@@ -62,6 +69,7 @@ class Scorpion(Animal):
     """
     Some of the animal with 1-2 extra methods related to this animal
     """
+
     def sting(self):
         print(f"{self.name} to sting")
 
@@ -83,10 +91,12 @@ for animal in animals:
     animal.sleep()
     print(f"{animal} is an instance of Animal class:", isinstance(animal, Animal))
 
+
 class Human:
     """
     Human class, should have eat, sleep, study, work
     """
+
     def eat(self):
         print(f"{self.__class__.__name__} is eating")
 
@@ -104,6 +114,7 @@ class Centaur(Human, Animal):
     """
     Centaur class should be inherited from Human and Animal and has unique method related to it.
     """
+
     def fight(self):
         print(f"{self.__class__.__name__} fights")
 
@@ -113,6 +124,7 @@ firenze.eat()
 firenze.sleep()
 firenze.fight()
 
+
 # 2. Create two classes: Person, Cell Phone, one for composition, another one for aggregation.
 # a.
 
@@ -121,6 +133,7 @@ class Person:
     """
     Make the class with composition.
     """
+
     def __init__(self):
         arm_left = Arm("This is left arm")
         arm_right = Arm("This is right arm")
@@ -131,6 +144,7 @@ class Arm:
     """
     Make the class with composition.
     """
+
     def __init__(self, message):
         self.message = message
 
@@ -139,6 +153,7 @@ person = Person()
 for arm in person.arms:
     print(arm.message)
 
+
 # b.
 
 
@@ -146,6 +161,7 @@ class CellPhone:
     """
     Make the class with aggregation
     """
+
     def __init__(self, screen):
         self.screen = screen
 
@@ -154,6 +170,7 @@ class Screen:
     """
     Make the class with aggregation
     """
+
     def __init__(self, screen_type):
         self.screen_type = screen_type
 
@@ -172,6 +189,7 @@ class Profile:
     Create regular class taking 8 params on init - name, last_name, phone_number, address, email, birthday, age, sex
     Override a printable string representation of Profile class and return: list of the params mentioned above
     """
+
     def __init__(self, name, last_name, phone_number, address, email, birthday, age, sex):
         self.name = name
         self.last_name = last_name
@@ -190,6 +208,7 @@ class Profile:
 profile = Profile("Taras", "Pohorilets", "0968090269", "Lviv", "taras.pohorilets@gmail.com", "13.03.1989", "32", "male")
 
 print(profile)
+
 
 # 4. * Create an interface for the Laptop with the next methods: Screen, Keyboard, Touchpad, WebCam, Ports, Dynamics
 # and create an HPLaptop class by using your interface.
