@@ -74,7 +74,8 @@ class Scorpion(Animal):
         print(f"{self.name} to sting")
 
 
-tomas, pit, mike, bessi, ralf = Cat("Tomas"), Dog("Pit"), Elephant("Mike"), Frog("Bessi"), Scorpion("Ralf")
+if __name__ == "__main__":
+    (tomas, pit, mike, bessi, ralf) = Cat("Tomas"), Dog("Pit"), Elephant("Mike"), Frog("Bessi"), Scorpion("Ralf")
 
 tomas.meow()
 tomas.purr()
