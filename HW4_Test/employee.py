@@ -1,7 +1,6 @@
 import employee
 
 
-
 class Employee:
     """A sample Employee class"""
 
