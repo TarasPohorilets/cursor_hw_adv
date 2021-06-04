@@ -39,8 +39,8 @@ class TestEmployee(unittest.TestCase):
 
     def test_apply_raise(self):
         self.employee1.apply_raise()
-        self.assertEqual(self.employee1.pay, 20000)
-        self.assertEqual(self.employee1.pay, 20000.00)
+        self.assertEqual(self.employee1.pay, 21000)
+        self.assertEqual(self.employee1.pay, 21000.00)
         self.employee2.apply_raise()
         self.assertEqual(self.employee2.pay, 34600)
 
