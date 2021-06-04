@@ -1,4 +1,5 @@
-import requests
+import employee
+
 
 
 class Employee:
@@ -23,7 +24,7 @@ class Employee:
         self.pay = int(self.pay * self.raise_amt)
 
     def monthly_schedule(self, month):
-        response = requests.get("http://company.com/{self.last}/{month}")
+        response = employee.get("http://company.com/{self.last}/{month}")
         if response.ok:
             return response.text
         else:
